@@ -24,7 +24,7 @@ def get_user(request, pk):
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 # Add user API
-@api_view(['POST'])
+@api_view(['POST','GET'])
 def add_user(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
@@ -33,7 +33,7 @@ def add_user(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # Update user API
-@api_view(['PUT'])
+@api_view(['PUT','GET'])
 def update_user(request, pk):
     try:
         user = User.objects.get(pk=pk)
@@ -47,7 +47,7 @@ def update_user(request, pk):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # Delete user API
-@api_view(['DELETE'])
+@api_view(['DELETE','GET'])
 def delete_user(request, pk):
     try:
         user = User.objects.get(pk=pk)
