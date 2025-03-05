@@ -29,7 +29,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+     https://github.com/joel-2112/PRODIGY_BD_02.git)
    cd your-repo-name
 
 2. **Create and activate a virtual environment:**
